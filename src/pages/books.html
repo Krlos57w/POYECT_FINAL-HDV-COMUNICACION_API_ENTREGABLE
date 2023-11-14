@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!--se agrego link de boottrap css-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="stilobooks.css"><!--prueba-->
+
+    <title>Bootstrap Piezas Mecanicas</title>
+  </head>
+
+  <body>
+    
+    <h1>Gestión de Piezas Mecanicas</h1>
+    <!-- agregar el js-->
+    <!--<script src="books.js">-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <header>
+      <nav class="navbar navbar-expand-lg bg-body-succes">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="https://www.youtube.com/watch?v=-1kHRP_JCyU" target="_blank">VIDEO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span><!--span para que se vea el icono-->
+            </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../../index.html">Inicio</a>
+                    
+
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Piezas</a><!--active para que se vea activo-->
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="../../HOJA_DE_VIDA_CARLOS_MELO/HOJA_VIDA_CARLOS_MELO.html" target="_blank">Hoja de vida</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true"></a>
+                  </li>
+                </ul>
+              </div>
+        </div>
+      </nav>
+    </header>
+    <h1>Piezas</h1>
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPieza"><!--createPieza para llamar el modal-->
+      Aca para agregar Piezas
+    </button>
+
+    <!-- Modal para ingresar piezas-->
+    <div class="modal fade" id="createPieza" tabindex="-1" aria-labelledby="crateBookLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="createBookLabel">Agrege su Pieza Mecanica</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!--formulario de ingreso de piezas-->
+            <!--input nombre de la pieza-->
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Nombre de la pieza</span>
+              <input id="name" name="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><!--se agrega el id para que se pueda llamar desde el js-->
+            </div>
+
+            <!--input nombre del fabricante de la pieza-->
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Nombre del Fabricante</span>
+              <input id="fabricante" name="fabricante" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><!--se agrega el id para que se pueda llamar desde el js-->
+            </div>
+
+            
+             <!--input precio de la pieza por unidad-->
+             <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Precio pieza</span>
+              <input id="precio" name="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><!--se agrega el id para que se pueda llamar desde el js-->
+            </div>
+
+              <!--input numero de numero de piezas-->
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Numero de piezas</span>
+                <input id="numeroPiezas" name="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><!--se agrega el id para que se pueda llamar desde el js-->
+              </div>
+              
+              <!--input estado del libro con checkbox-->
+              <!--<label>-->
+              <!--  <input type="checkbox" id="cbox1"/> Libro esta activo-->
+              <!--</label>-->
+
+               <!-- <br/>-->
+                
+
+
+            <!--input select Estado de la pieza, puede estar terminado o en fabricación-->
+            <select id="state" name="state" class="form-select form-select-lg mb-3" aria-label="Large select example"><!--se agrega el id para que se pueda llamar desde el js-->
+              <option selected>Seleccione el Estado de la Pieza</option>
+              <option value="Terminado">Terminado</option><!--value para que se pueda llamar desde el js-->
+              <option value="fabricacion">En fabricacion</option>
+              
+            </select>
+            <!--fin input select -->
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button><!--data-bs-dismiss="modal" para que se cierre el modal-->
+            <button id="saveBookButton" type="button" class="btn btn-primary">Guardar</button><!--se agrega el id para que se pueda llamar desde el js-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--fin modal-->
+     
+    <!--modal para eliminar-->
+    <div class="modal" id="deleteBookModal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Eliminar Pieza</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Pieza ID: <span id="deletePiezaID"></span> </p>
+            <p>Esta seguro de Eliminar esta pieza?: <span id="deletePiezaTitle"></span> </p>
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button id="deletePiezaButton" type="button" class="btn btn-primary">Eliminar</button>
+          </div>
+        </div>
+      </div>
+    </div><!--fin modal para eliminar-->
+    <!-- Modal -->
+
+    <!--modal para editar pieza-->
+      <!-- Modal para Editar pieza-->
+    <div class="modal fade" id="editBookModal" tabindex="-1" aria-labelledby="crateBookLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="editBookModalLabel">Actualice su pieza <span class="badge text-bg-dark " id = "editPiezaID"></span></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <!--formulario de ingreso de pieza-->
+
+            <!--input nombre del fabricante-->
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Nombre del Fabricante</span>
+              <input id="editPiezaFabricante" name="autor" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+            <!--input nombre de la pieza-->
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Nombre de la pieza</span>
+              <input id="editPiezaTitle" name="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+
+            <!--input precio unitario de la pieza-->
+            <div class="input-group input-group-sm mb-3">
+              <span class="input-group-text" id="inputGroup-sizing-sm">Precio pieza</span>
+              <input id="editPiezaPrecio" name="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+            </div>
+
+              <!--input numero de piezas-->
+              <div class="input-group input-group-sm mb-3">
+                <span class="input-group-text" id="inputGroup-sizing-sm">Numero de piezas</span>
+                <input id="editPiezaNumeroPiezas" name="name" type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+              </div>
+              
+              <!--input estado del libro con checkbox-->
+              <!--<label>-->
+              <!-- <input type="checkbox" id="cbox1"/> libro esta activo-->
+              <!--</label>-->
+
+                
+
+
+            <!--input select estado de la pieza-->
+            <select id="editPiezaState" name="genre" class="form-select form-select-lg mb-3" aria-label="Large select example">
+              <option selected>Seleccione El estado de la Pieza</option><!--seleccionar el estado de la pieza-->
+              <option value="Terminado">Terminado</option>
+              <option value="fabricacion">fabricacion</option>
+              
+            </select>
+            <!--fin input select -->
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <button id="updateBookButton" type="button" class="btn btn-primary">Actualizar <i class="bi bi-upload"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin Modal editar-->
+
+    <!-- Modal para mostrar piezas-->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Card Pieza</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+            <!-- cards para mostrar Pieza-->
+              <div id="cardBook" class="card" style="width: 18rem;">
+                <img src="piezas_mecanicas.jpg" class="card-img-top" alt="libro">
+                <div class="card-body">
+                  <h5 class="card-title">Card Pieza</h5>
+                  <p class="card-text">Descripción.</p>
+                  
+                  <p>Pieza ID: <span id="ShowCardBookID"></span> </p>
+                  <p>Nombre pieza: <span id="ShowCardBookTitle"></span> </p>
+                  <p>Estado de pieza: <span id="ShowCardBookGenre"></span> </p>
+                  <p>Fabricante: <span id="ShowCardBookAuthor"></span> </p>
+                  <p>Precio Pieza: <span id="ShowCardBookPrecio"></span> </p>
+                  <p>Numero de Piezas: <span id="ShowCardBookNumeroPaginas"></span> </p>
+
+                </div>
+              </div><!--fin cards para mostrar -->
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <!--button id="showCard" type="button" class="btn btn-primary">mostrar cards</button-->
+          </div>
+        </div>
+      </div>
+    </div><!--fin Modal para mostrar -->
+
+    
+
+
+        <div class="container py-4">
+            <div class="py-lg-5 mb-4 bg-body-tertiary rounded-3"> <!--condicion para tamaño-->
+                <table class="table table-hover" border="5"><!--tabla-->
+                  <thead>
+                  <tr>
+                    <th>ID Pieza Mecanica</th>
+                    <th>Nombre Pieza</th>
+                    <th>Estado de pieza</th>
+                    <th>Fabricante</th>
+                    
+                    <th>Editar</th>
+                    <th>Eliminar</th>
+                    <th>Mostrar</th>
+                    <th>Precio unitario</th>
+                    <th>Cantidad de piezas</th>
+                   
+                  </tr>
+                </thead>
+
+                <!--cuerpo de la tabla-->
+                <tbody id="tableBody">
+
+                </tbody>
+
+                </table>
+            </div>
+        </div>
+        <script src="../../src/js/books.js"></script>
+     
+  </body>
+</html>
