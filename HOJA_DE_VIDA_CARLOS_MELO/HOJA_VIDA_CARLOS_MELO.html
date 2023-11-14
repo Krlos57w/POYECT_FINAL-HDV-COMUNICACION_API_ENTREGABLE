@@ -7,10 +7,12 @@
     <title>Hoja de vida Carlos Melo</title>
     <!--la instruccion siguiente relaciona el archivo .html con el archivo .css -->
     <link rel="stylesheet" href="estilohdvcarlos.css">
+    <!--linkbootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 
 <body>
-    <header>
+    <header class="bg-primary  text-dark  text-center py-5"><!--cambios-->
         <!--header para definir una seccion de encabezado, suele contener informacion 
         introductoria o de identificación sobre el contenido de la página-->
         <h1>HOJA DE VIDA CARLOS MELO</h1>
@@ -31,7 +33,7 @@
             <!--para indicar que los enlaces son parte de la navegación principal del sitio. 
             Esto ayuda a los motores de búsqueda y a los dispositivos asistivos 
             a comprender la estructura de la página.-->
-            <ul>
+            <ul class="bg-gradient text-bg-info  "  >
                 <li><a href="https://m.facebook.com/people/Krlos-Melo/100030000466524/" target="_blank">FACEBOOK</a></li>
                 <br>
                 <li><a href="https://www.instagram.com/krlos_57/#" target="_blank">INSTAGRAM</a></li>
@@ -43,7 +45,7 @@
         
     </header>
 
-    <main>
+    <main class="container mt-3 "><!--cambio-->
         <section class="perfil-laboral">
             <h2>PERFIL LABORAL:</h2>
             <p>Profesional en ingeniería mecatronica y tecnologo en electrónica capacidad de diseñar, simular y construir,
@@ -173,7 +175,7 @@
                 </li>
 
                 <li>Ajedrez o juegos de estrategia
-                <!--preguntar como enlistar la instruccion anterior-->
+               
                 <img src="https://c8.alamy.com/compes/r6h99j/tablero-de-ajedrez-con-piezas-en-posicion-inicial-aislado-r6h99j.jpg" alt="imagen ref. a ajedrez" width="150px" height="150px">
                 </li> 
 
@@ -190,6 +192,13 @@
         </section>
 
     </main>
-        
+
+    <footer class="bg-dark text-white text-center py-3"><!--cambios-->
+        <p>&copy; 2023 Hoja de Vida Carlos Melo</p>
+    </footer>
+    <!---->
+   
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-eKfMfr5OmI9cpoh2yiGg6G6v4LPb5sSvzKJ/N5smdNlgzkksbtrWw89vgtN44Nd" crossorigin="anonymous"></script>   
 </body>
 </html>
